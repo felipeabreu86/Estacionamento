@@ -2,7 +2,7 @@
 
 namespace Site.Controllers
 {
-    public class HomeController : Controller
+    public class ServicosController : Controller
     {
         public ActionResult Index()
         {

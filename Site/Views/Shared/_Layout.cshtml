@@ -1,42 +1,36 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <title>Estacionamento 24 Horas - @ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Estacionamento 24 horas - Empresa modelo">
+    <meta name="keywords" content="Estacionamento, 24h, 24 horas, carros, motos, fácil acesso">
+    <meta name="author" content="Felipe Abreu">
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
+    <!--Cabeçalho-->
+    <header>
+        <img src="~/Content/img/Logo.png" alt="Estacionamento 24h - Logo" width="100px" height="100px" />
+        <p id="logo">Estacionamento 24h</p>
+        <p>Slogan da empresa</p>
+    </header>
+    <nav>
+        @Html.Partial("_MenuPrincipal")
+    </nav>
+    <!--Seção principal-->
+    <main>
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    </main>
+    <!--Rodapé-->
+    <footer>
+        <nav>
+            @Html.Partial("_MenuPrincipal")
+        </nav>
+        <section id="copyright">
+            <p>Copyright - Todos os direitos reservados</p>
+        </section>
+    </footer>
 </body>
 </html>
