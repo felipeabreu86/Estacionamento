@@ -1,18 +1,19 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Estacionamento 24 Horas - @ViewBag.Title</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Estacionamento 24 horas - Empresa modelo">
-    <meta name="keywords" content="Estacionamento, 24h, 24 horas, carros, motos, fácil acesso">
+    <meta name="keywords" content="Estacionamento, 24h, 24 horas, carros, motos, fácil acesso, @Html.Raw(@ViewBag.Keywords)">
     <meta name="author" content="Felipe Abreu">
+    <meta name="robots" content="index, follow" />
 </head>
 <body>
     <!--Cabeçalho-->
     <header>
-        <img src="~/Content/img/Logo.png" alt="Estacionamento 24h - Logo" width="100px" height="100px" />
+        <img src="~/Content/img/Logo.png" alt="Estacionamento 24h - Logo" width="100" height="100" />
         <p id="logo">Estacionamento 24h</p>
         <p>Slogan da empresa</p>
     </header>
@@ -29,6 +30,7 @@
             @Html.Partial("_MenuPrincipal")
         </nav>
         <section id="copyright">
+            <h2>Direitos Autorais</h2>
             <p>Copyright - Todos os direitos reservados</p>
         </section>
     </footer>

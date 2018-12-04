@@ -2,11 +2,11 @@
 
 namespace Site.Controllers
 {
-    public class ServicosController : Controller
+    public class PlanosController : Controller
     {
         public ActionResult Index()
         {
-            return View("Servicos");
+            return View("Planos");
         }
     }
 }
